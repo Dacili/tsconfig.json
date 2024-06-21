@@ -74,3 +74,27 @@ Notice, that this file usually includes tsconfig.json file in itself,
 
 ```
 **3. tsconfig.spec.json**  - this one is used for the purposes of tests in Angular apps. The tests have .spec extensions.
+
+## Purpose of paths property
+The purpose of paths property, is to avoid relative paths in imports. This way you could always use defined values from paths, instead of relative paths (which can be very long, for example multiple ../../../). Paths are relative to baseUrl property.  
+ 
+ ```
+"paths": {
+      "@models/*": ["src/app/_models/*"],
+      "@services/*": ["src/app/_services/*"],
+      "@core/*": ["src/app/core/*"],
+      "@environments/*": ["src/environments/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@state/*": ["src/app/_store/*"]
+    }
+```
+Instead of this:  
+![image](https://github.com/Dacili/tsconfig.json/assets/37112852/9fee6539-1703-46a0-bd49-3e2e3a3712fe)  
+You would have this:
+![image](https://github.com/Dacili/tsconfig.json/assets/37112852/eba9187a-4f57-4343-bcbb-95c0800a8ff6)  
+Note: Currently the Visual studio is always suggesting relative path, it seems like bug. But in Visual Studio Code it suggests paths.  
+#### Why is beneficial to have paths?
+Code readability, less length in import lines, maintainability - *if the structure of the app is changed, you don't have to modify moved files, everything stays the same* (except maybe paths to be updated in tsconfig json if needed)
+
+
+
