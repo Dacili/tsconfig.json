@@ -97,7 +97,7 @@ Note: Currently the Visual studio is always suggesting relative path, it seems l
 Code readability, less length in import lines, maintainability - *if the structure of the app is changed, you don't have to modify moved files, everything stays the same* (except maybe paths to be updated in tsconfig json if needed)  
 
 ## "noImplicitAny"
-If you don't want always to provide the type of variables, parameters... and not get an error *'Parameter 'xx' implicitly has an 'any' type.'*, then mark this property as false:
+If you don't want always to provide the type of variables, parameters... and not get an error *'Parameter 'xx' implicitly has an 'any' type.'*, then mark this property as false, nesting it inside *"compilerOptions"*:
 ```
 "noImplicitAny": false
 ```
