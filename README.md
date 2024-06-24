@@ -94,7 +94,11 @@ You would have this:
 ![image](https://github.com/Dacili/tsconfig.json/assets/37112852/eba9187a-4f57-4343-bcbb-95c0800a8ff6)  
 Note: Currently the Visual studio is always suggesting relative path, it seems like bug. But in Visual Studio Code it suggests paths.  
 #### Why is beneficial to have paths?
-Code readability, less length in import lines, maintainability - *if the structure of the app is changed, you don't have to modify moved files, everything stays the same* (except maybe paths to be updated in tsconfig json if needed)
+Code readability, less length in import lines, maintainability - *if the structure of the app is changed, you don't have to modify moved files, everything stays the same* (except maybe paths to be updated in tsconfig json if needed)  
 
-
+## "noImplicitAny"
+If you don't want always to provide the type of variables, parameters... and not get an error *'Parameter 'xx' implicitly has an 'any' type.'*, then mark this property as false:
+```
+"noImplicitAny": false
+```
 
