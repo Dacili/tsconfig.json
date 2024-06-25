@@ -141,3 +141,5 @@ Specifies an array of filenames or patterns that should be skipped when resolvin
 ```
 Stuff in "files" will never be ruled out by "exclude" patterns, if you add any, whereas stuff from "include" will.
 
+## What's the difference between includes and files?
+```files``` is used to specify separate files ***directly*** by their ***path***, while ```include``` and ```exclude``` is used to ***target collections or groups of files or folders*** etc.
