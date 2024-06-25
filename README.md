@@ -126,6 +126,8 @@ These filenames are resolved relative to the directory containing the tsconfig.j
 }
 ```
 ![image](https://github.com/Dacili/tsconfig.json/assets/37112852/adf1b536-cc49-493a-92b7-b3a89cc5adbc)  
+
+***glob pattern*** - specify sets of filenames with wildcard characters.  
 ```include``` and ```exclude``` support ***wildcard*** characters to make glob patterns:
 
  - \* matches 0 or more characters
