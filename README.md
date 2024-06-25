@@ -104,4 +104,40 @@ If you don't want always to provide the type of variables, parameters... and not
 ```
 "noImplicitAny": false
 ```
+## "files"
+List of files to include in the program. An error occurs if any of the files can’t be found.  
+They are used to specify separate files **directly by their path**.  
+```
+ "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+```
+## "include"
+Specifies an array of filenames or patterns to include in the program.  
+```include``` and ```exclude``` are used to ***target collections or groups of files or folders*** etc.  
+These filenames are resolved relative to the directory containing the tsconfig.json file.  
+```
+{
+  "include": ["src/**/*", "tests/**/*"]
+}
+```
+![image](https://github.com/Dacili/tsconfig.json/assets/37112852/adf1b536-cc49-493a-92b7-b3a89cc5adbc)  
+```include``` and ```exclude``` support wildcard characters to make glob patterns:
+
+ - \* matches 0 or more characters
+ - ? matches any 1 character
+ - **/ matches any directory nested to any level
+
+
+
+## "exclude"
+Specifies an array of filenames or patterns that should be skipped when resolving **include**.
+```
+"exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+```
+Stuff in "files" will never be ruled out by "exclude" patterns, if you add any, whereas stuff from "include" will.
 
