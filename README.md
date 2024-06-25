@@ -105,14 +105,17 @@ If you don't want always to provide the type of variables, parameters... and not
 "noImplicitAny": false
 ```
 ## "files"
-List of files to include in the program. An error occurs if any of the files can’t be found.  
-They are used to specify separate files **directly by their path**.  
+List of files to include in the program. They are used to specify separate files **directly by their path**.  
 ```
  "files": [
     "src/main.ts",
     "src/polyfills.ts"
   ],
 ```
+An error occurs if any of the files can’t be found. For example, if we're missing ```medina.ts``` file we will get errors like:  
+![image](https://github.com/Dacili/tsconfig.json/assets/37112852/e72a17c2-309f-4edd-932c-d206985c9622)   
+*This is useful when you only have a small number of files and when you don't need wildcards.* Using wildcard inside ```files```, will cause an error.
+
 ## "include"
 Specifies an array of filenames or patterns to include in the program.  
 ```include``` and ```exclude``` are used to ***target collections or groups of files or folders*** etc.  
@@ -142,4 +145,4 @@ Specifies an array of filenames or patterns that should be skipped when resolvin
 Stuff in "files" will never be ruled out by "exclude" patterns, if you add any, whereas stuff from "include" will.
 
 ## What's the difference between includes and files?
-```files``` is used to specify separate files ***directly*** by their ***path***, while ```include``` and ```exclude``` is used to ***target collections or groups of files or folders*** etc.
+```files``` is used to specify separate files ***directly*** by their ***path***, while ```include``` and ```exclude``` is used to ***target collections or groups of files or folders*** etc. And also if some file from ```files``` is missing, we will get an error.
