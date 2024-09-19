@@ -95,7 +95,10 @@ Instead of this:
 ![image](https://github.com/Dacili/tsconfig.json/assets/37112852/9fee6539-1703-46a0-bd49-3e2e3a3712fe)  
 You would have this:
 ![image](https://github.com/Dacili/tsconfig.json/assets/37112852/eba9187a-4f57-4343-bcbb-95c0800a8ff6)  
-Note: Currently the Visual studio is always suggesting relative path, it seems like bug. But in Visual Studio Code it suggests paths.  
+Note: Currently the Visual studio is always suggesting relative path, it seems like bug. But in Visual Studio Code it suggests paths.   
+Update: It is feasible in Visual studio as well. Tools -> Options -> Text editor -> Javascript/Typescript -> Formatting and then find Section, Module Specifier Preference, and choose the first option:  
+![image](https://github.com/user-attachments/assets/43d74bdc-839e-4626-8668-409a8ccbaad1)
+  
 #### Why is beneficial to have paths?
 Code readability, less length in import lines, maintainability - *if the structure of the app is changed, you don't have to modify moved files, everything stays the same* (except maybe paths to be updated in tsconfig json if needed)  
 
